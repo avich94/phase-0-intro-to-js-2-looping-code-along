@@ -17,24 +17,22 @@ function wrapGifts(gifts) {
 wrapGifts(gifts);
 */
 
-function writeCards(cards, event) {
-    const thankYouMessages = [];
-  
-    for (let i = 0; i < cards.length; i++) {
-      thankYouMessages.push(`Thank you, ${cards[i]}, for the wonderful ${event} gift!`);
-    }
-  
-    return thankYouMessages;
-  }
-  
-  const cards = ["Guadalupe", "Ollie", "Aki"];
-  const event = "surprise";
-  console.log(writeCards(cards, event));
 
-function countDown(number) {
-    let i = number;
-    while (i >= 0) {
-        console.log(i);
-        i--;
-    }
+function writeCards(names, event) {
+  let messages = [];
+  for (let i = 0; i < names.length; i++) {
+    messages.push(`Thank you, ${names[i]}, for the wonderful ${event} gift!`);
+  }
+  return messages;
 }
+
+writeCards(["Charlie", "Samip", "Ali"], "birthday");
+debugger;
+
+function countDown() {
+  let i = 10;
+  while (i >= 0) {
+    console.log(i--);
+  }
+}
+countDown;
